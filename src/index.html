@@ -1,18 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mega Sale Navbar</title>
+  <style>
+    /* === Reset & Base === */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: #f8f8f8;
+    }
+
+    /* === Navbar Container === */
+    .navbar {
+      background: linear-gradient(90deg, #ff2e63, #ff6f61);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 40px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+
+    /* === Logo === */
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .logo span {
+      background: white;
+      color: #ff2e63;
+      padding: 3px 8px;
+      border-radius: 5px;
+    }
+
+    /* === Nav Links === */
+    .nav-links {
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 500;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 0%;
+      height: 2px;
+      background: white;
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    /* === Search Bar === */
+    .search-box {
+      display: flex;
+      align-items: center;
+      background: rgba(255,255,255,0.2);
+      border-radius: 25px;
+      padding: 5px 15px;
+    }
+
+    .search-box input {
+      background: transparent;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 5px;
+      width: 150px;
+      font-size: 0.9rem;
+    }
+
+    .search-box input::placeholder {
+      color: #fff;
+      opacity: 0.8;
+    }
+
+    .search-box button {
+      background: white;
+      border: none;
+      color: #ff2e63;
+      padding: 6px 12px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .search-box button:hover {
+      background: #ffe3e9;
+    }
+
+    /* === Mega Sale Tag === */
+    .sale-banner {
+      background: #ffe600;
+      color: #222;
+      text-align: center;
+      padding: 8px 0;
+      font-weight: 600;
+      letter-spacing: 1px;
+      font-size: 1rem;
+      animation: blink 2s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { background: #ffe600; color: #222; }
+      50% { background: #ff2e63; color: #fff; }
+    }
+
+    /* === Responsive === */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      .search-box input {
+        width: 100px;
+      }
+    }
+
+  </style>
 </head>
 <body>
-    <h1>fdfdsf</h1>
-    <h1>fdfdsf</h1>
-    <h1>fdfdsf</h1>
-    <h1>fdfdsf</h1>
-    <h1>fdfdsf</h1>
-    <h1>fdfdsf</h1>
-    <h1>fdfdsf</h1>
-    <h1>fdfdsf</h1>
+
+  <!-- Mega Sale Banner -->
+  <div class="sale-banner">🔥 MEGA SALE! Up to 70% OFF - Limited Time Only! 🔥</div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">Mega<span>Sale</span></div>
+
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Deals</a>
+      <a href="#">Categories</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
+
+    <div class="search-box">
+      <input type="text" placeholder="Search deals...">
+      <button>Go</button>
+    </div>
+  </nav>
+
+  <!-- Example Page Content -->
+  <h1 style="text-align:center; margin-top: 60px;">Welcome to the Mega Sale Page!</h1>
+  <h2 style="text-align:center; color: #555;">Shop Smart. Save Big.</h2>
+
 </body>
 </html>
